@@ -1,0 +1,12 @@
+#intro {
+  background-image: url("https://www.google.co.za/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwj-2rrh8qnUAhXFuRQKHZSDCAgQjBwIBA&url=http%3A%2F%2Fwallpapercave.com%2Fwp%2FIkltXsK.jpg&psig=AFQjCNH1_zwN8QSSa70CUgUucKhXrtxnNg&ust=1496861743135106");
+  background-repeat: no-repeat;
+}
+
+#intro h1 {
+  font-size: 18px;
+  color: #AF87B4;
+  height: 20px;
+  width: 100px;
+  margin: auto;
+}
