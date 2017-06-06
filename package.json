@@ -1,0 +1,26 @@
+{
+  "name": "realworld",
+  "version": "1.0.0",
+  "description": "the one stop shop for recent college graduates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgunther13/realworld.git"
+  },
+  "author": "Chris Gunther",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cgunther13/realworld/issues"
+  },
+  "homepage": "https://github.com/cgunther13/realworld#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "pg": "^6.2.3"
+  }
+}
