@@ -23,9 +23,8 @@ const connString = process.env.DATABASE_URL || 'postgres://localhost/realworld';
 // }));
 
 // Display HTML and CSS
-// app.use(express.static(__dirname + '/views'));
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'html');
+app.use(express.static(__dirname + '/views'));
+app.set('view engine', 'ejs');
 
 // Parse req.body
 // app.use(bodyParser.urlencoded({
@@ -39,8 +38,8 @@ const connString = process.env.DATABASE_URL || 'postgres://localhost/realworld';
 
 // Landing Page
 app.get('/', (req, res) => {
-  res.send("Hello World")
-  // res.render('landing.html');
+  // res.send("Hello World")
+  res.render('landing');
 });
 
 
