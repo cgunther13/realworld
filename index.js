@@ -2,6 +2,9 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const pg = require('pg');
+
+const usersControllers = require('./controllers/users.js');
 
 const app = express();
 
@@ -27,10 +30,10 @@ app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 // Parse req.body
-// app.use(bodyParser.urlencoded({
-//    extended: false
-// }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+   extended: false
+}));
+app.use(bodyParser.json());
 
 /*
 / Router
@@ -38,9 +41,10 @@ app.set('view engine', 'ejs');
 
 // Landing Page
 app.get('/', (req, res) => {
-  // res.send("Hello World")
   res.render('landing');
 });
+
+app.post('/sign-up', usersControllers.landingUser)
 
 
 app.listen(port, () => {
