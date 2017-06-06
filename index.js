@@ -1,11 +1,10 @@
 'use strict';
 
 const express = require('express');
-
-const usersControllers = require('./controllers/users.js');
-const postsControllers = require('./controllers/posts.js');
+const bodyParser = require('body-parser');
 
 const app = express();
+
 const host = process.env.IP || '0.0.0.0';
 const port = process.env.PORT || 4000;
 
@@ -24,8 +23,9 @@ const connString = process.env.DATABASE_URL || 'postgres://localhost/realworld';
 // }));
 
 // Display HTML and CSS
-app.use(express.static(__dirname + '/views/'));
-app.set('views', 'views');
+// app.use(express.static(__dirname + '/views'));
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'html');
 
 // Parse req.body
 // app.use(bodyParser.urlencoded({
@@ -39,5 +39,11 @@ app.set('views', 'views');
 
 // Landing Page
 app.get('/', (req, res) => {
-  res.render('landing');
+  res.send("Hello World")
+  // res.render('landing.html');
+});
+
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`);
 });
