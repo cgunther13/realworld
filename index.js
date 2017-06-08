@@ -26,7 +26,8 @@ const connString = process.env.DATABASE_URL || 'postgres://localhost/realworld';
 // }));
 
 // Display HTML and CSS
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views/html5up-spectral/'));
+app.set('views', 'views/html5up-spectral');
 app.set('view engine', 'ejs');
 
 // Parse req.body
