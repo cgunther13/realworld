@@ -45,6 +45,9 @@ app.get('/', (req, res) => {
   res.render('landing');
 });
 
+app.get('/sign-up', (req, res) => {
+  res.render('sign-up');
+});
 app.post('/sign-up', usersControllers.landingUser)
 
 
