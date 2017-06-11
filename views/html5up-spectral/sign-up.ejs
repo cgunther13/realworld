@@ -13,6 +13,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<!--jQuery-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="assets/js/app.js"></script>
 	</head>
 	<body>
 
@@ -42,7 +46,13 @@
 
 				<!-- Main -->
 					<article id="main">
-						<header>
+						<header class="looking-for">
+							<!-- <h2>I'm looking for</h2>
+							<ul>
+								<li class="apartments">Apartments</li>
+								<li class="roommates">Roommates</li>
+								<li class="both">Both</li> -->
+							</ul>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
@@ -50,23 +60,35 @@
 								<h3>Tell us about yourself</h3>
                 <p> Note: All items are optional, but the more we know the better our recommendations will be!</p>
 
-                <form class="madlib">
+                <form class="madlib" method="get" action="/sign-up">
                   <div>
-                    <p>My name is <input type="text" name="name" id="name" /> and
-                      I am <input type="number" name="age" id="age" /> years old.
-                      I will be moving to <input type="text" name="city" id="city" />
-                      on <input type="date" name="move-in-date" id="move-in-date" />
-                      to work at <input type="text" name="company" id="company" />.
-                      I am looking for <input type="number" name="num_roommates" id="num_roommates" />
-                      roommates to live with in the <input type="text" name="num_roommates" id="num_roommates" />
-                      neighborhood. I would like to pay between <input type="range" name="min-rent" id="min-rent" />
-                      and <input type="text" name="max-rent" id="max-rent" /> per
-                      month. I would describe myself as <input type="text" name="adjective1" id="adjective1" />,
-                      <input type="text" name="adjective2" id="adjective2" />, and
+                    <p>My name is <input type="text" name="first_name" id="first_name" placeholder="First Name"/>
+											<input type="text" name="last_name" id="last_name" placeholder="Last Name"/>
+											and I am <input type="number" name="age" id="age" /> years old.
+                      I will be moving to <input type="text" name="city" id="city" placeholder="City, State"/>
+                      on <input type="date" name="move_in_date" id="move_in_date" />
+                      to work at <input type="text" name="company" id="company" placeholder="Company Name"/>.
+                      I am looking for a place with <input type="number" name="num_bedrooms" id="num_bedrooms" />
+                      bedrooms and <input type="number" name="num_baths" id="num_baths" />
+											bathrooms in <input type="text" name="neighborhood1" id="neighborhood1" placeholder="Neighborhood 1" />,
+											<input type="text" name="neighborhood1" id="neighborhood2" placeholder="Neighborhood 2" />, or
+											<input type="text" name="neighborhood1" id="neighborhood3" placeholder="Neighborhood 3" />.
+                      I would like to pay between <input type="number" name="min_rent" id="min_rent" placeholder="Min"/>
+											and <input type="number" name="max_rent" id="max_rent" placeholder="Max"/>
+											per month.</p>
+										<p></p>
+										<p>I am also looking for <input type="number" name="num_roommates" id="num_roommates" />
+											roommates to live with. I would describe myself as <input type="text" name="adjective1" id="adjective1" placeholder="Adjective 1"/>,
+                      <input type="text" name="adjective2" id="adjective2" placeholder="Adjective 2"/>, and
+											<input type="text" name="adjective3" id="adjective3" placeholder="Adjective 3"/> and
                       my <a href="https://www.16personalities.com/free-personality-test" target="_blank">Myers-Briggs</a>
-                      personality type is <input type="text" name="myers-briggs" id="myers-briggs" />.
-                      Please contact me at <input type="email" name="email" id="email" />
-                      or <input type="text" name="phone" id="phone" />. Oh, and
+                      personality type is <input type="text" name="myers_briggs" id="myers_briggs" />.
+											I want my roommates to be <input type="text" name="r_adjective1" id="r_adjective1" placeholder="Adjective 1"/>,
+                      <input type="text" name="r_adjective2" id="r_adjective2" placeholder="Adjective 2"/>, and
+											<input type="text" name="r_adjective3" id="r_adjective3" placeholder="Adjective 3"/>.</p>
+										<p></p>
+                    <p>Please contact me at <input type="email" name="email" id="email" placeholder="Email"/>
+                      or <input type="tel" name="phone" id="phone" placeholder="Phone Number"/>. Oh, and
                       I'd like my password to be <input type="password" name="password" id="password" />.</p>
                     <button class="button special">Find Matches</button>
                   </div>
@@ -93,6 +115,7 @@
 			</div>
 
 		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -100,6 +123,5 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

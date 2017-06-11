@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 app.get('/sign-up', (req, res) => {
   res.render('sign-up');
 });
-app.post('/sign-up', usersControllers.landingUser)
+app.post('/sign-up', usersControllers.insertUser)
 
 
 app.listen(port, () => {

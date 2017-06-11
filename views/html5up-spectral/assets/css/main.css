@@ -3649,6 +3649,34 @@
 
 		}
 
+/* Sign-Up Header */
+
+	.looking-for {
+		color: white;
+	}
+
+		.looking-for h2 {
+			color: #00688B;
+		}
+
+		.looking-for li {
+			display: inline-block;
+			background-color: #00688B;
+			padding: 1em 2em;
+			font-size: 18px;
+			box-shadow: none !important;
+			color: #ffffff !important;
+			border-radius: 3px;
+		}
+
+		.looking-for li:hover {
+			display: inline-block;
+			background-color: rgba(0, 104, 139, 0.9);
+			padding: 1em 2em;
+			font-size: 18px;
+			box-shadow: none !important;
+		}
+
 /* Madlib */
 
 	.madlib div {
@@ -3659,25 +3687,58 @@
 	.madlib p {
 		color: #00688B;
 		font-size: 150%;
+		line-height: 150%;
+	}
+
+	.madlib br {
+		display: block;
+		line-height: 200px;
 	}
 
 	.madlib input {
 		width: 40%;
 		height: 150%;
 		display: inline;
+		font-size: 100%
 	}
 
-	.madlib input[type="number"],
-	input[type="date"] {
-		color: black;
+	.madlib #first_name,
+	#last_name {
+		width: 300px;
 	}
 
-	.madlib input[type="number"] {
-		width: 45px;
+	.madlib #age,
+	#num_bedrooms,
+	#num_baths,
+	#num_roommates {
+		width: 80px;
+		color: #00688B;
 	}
 
-	.madlib input[type="date"] {
-		width: 160px;
+	.madlib #move_in_date {
+		width: 250px;
+		color: #00688B;
+	}
+
+	.madlib #company {
+		width: 375px;
+	}
+
+	.madlib #max_rent,
+	#min_rent,
+	#myers_briggs {
+		width: 125px;
+		color: #00688B;
+	}
+
+	.madlib #email {
+		width: 450px;
+		color: #00688B;
+	}
+
+	.madlib #phone {
+		width: 300px;
+		color: #00688B;
 	}
 
 /* Main */
