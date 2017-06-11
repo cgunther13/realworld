@@ -2645,6 +2645,7 @@
 		.wrapper.style1 {
 			background-color: #00688B;
 			color: #c7ebe8;
+			padding: 1em;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2653,6 +2654,7 @@
 
 			.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
 				color: #ffffff;
+				font-size: 1.1em;
 			}
 
 			.wrapper.style1 hr {
@@ -3391,8 +3393,8 @@
 		-ms-justify-content: center;
 		justify-content: center;
 		cursor: default;
-		height: 100vh;
-		min-height: 35em;
+		height: 80%;
+		min-height: 32em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -3458,7 +3460,7 @@
 			}
 
 		#banner li a {
-			border: 2px solid #00688B;
+			background-color: #00688B;
 			width: 300px;
 			border-radius: 15px;
 		}
@@ -3577,6 +3579,12 @@
 
 	body.is-loading #banner:after {
 		opacity: 1;
+	}
+
+/* How We Help */
+
+	#one section {
+		padding: 5px;
 	}
 
 /* Sign-Up */
@@ -3711,7 +3719,7 @@
 
 	.madlib #first_name,
 	#last_name {
-		width: 300px;
+		width: 290px;
 	}
 
 	.madlib #age,
@@ -3728,7 +3736,7 @@
 	}
 
 	.madlib #company {
-		width: 375px;
+		width: 370px;
 	}
 
 	.madlib #max_rent,
@@ -3900,6 +3908,11 @@
 		}
 
 /* Landing */
+
+	#intro h1 {
+		color: white;
+		height: 75%;
+	}
 
 	body.landing #page-wrapper {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
