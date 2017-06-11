@@ -7,6 +7,10 @@ client.connect((err) => {
   if (err) { return; }
 });
 
+function hashPassword(plaintextPassword, callback){
+  return scrypt.kdfSync(plaintextPassword, scryptParameters);
+}
+
 function insertUser(first_name, last_name, age, city, move_in_date, company,
   num_bedrooms, num_baths, neighborhood1, neighborhood2, neighborhood3,
   min_rent, max_rent, num_roommates, adjective1, adjective2, adjective3,
@@ -26,5 +30,6 @@ function insertUser(first_name, last_name, age, city, move_in_date, company,
 }
 
 module.exports = {
+  hashPassword: hashPassword,
   insertUser: insertUser
 };

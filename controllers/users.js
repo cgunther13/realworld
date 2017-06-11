@@ -17,6 +17,9 @@ function insertUser(req, res) {
     return;
   }
 
+  // Hash the password
+  hash = usersModels.hashPassword(req.body.password);
+
   // Insert the user into the LANDING database
   usersModels.insertUser(req.body.first_name, req.body.last_name, req.body.age,
     req.body.city, req.body.move_in_date, req.body.company,
@@ -25,7 +28,7 @@ function insertUser(req, res) {
     req.body.max_rent, req.body.num_roommates, req.body.adjective1,
     req.body.adjective2, req.body.adjective3, req.body.myers_briggs,
     req.body.r_adjective1, req.body.r_adjective2, req.body.r_adjective3,
-    req.body.email, req.body.phone, req.body.password);
+    req.body.email, req.body.phone, hash);
 
   res.redirect('/');
 }

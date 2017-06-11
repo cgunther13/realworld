@@ -3702,6 +3702,13 @@
 		font-size: 100%
 	}
 
+	.madlib select {
+		width: 45%;
+		height: 150%;
+		display: inline;
+		font-size: 100%
+	}
+
 	.madlib #first_name,
 	#last_name {
 		width: 300px;
