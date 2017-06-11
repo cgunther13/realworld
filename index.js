@@ -50,6 +50,10 @@ app.get('/sign-up', (req, res) => {
 });
 app.post('/sign-up', usersControllers.insertUser)
 
+app.get('/thanks', (req, res) => {
+  res.render('thanks');
+});
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

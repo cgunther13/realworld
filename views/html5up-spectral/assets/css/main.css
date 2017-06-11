@@ -3649,17 +3649,17 @@
 
 		}
 
-/* Sign-Up Header */
+/* Header Text */
 
-	.looking-for {
+	.header-text {
 		color: white;
 	}
 
-		.looking-for h2 {
+		.header-text h2, p {
 			color: #00688B;
 		}
 
-		.looking-for li {
+		.header-text li {
 			display: inline-block;
 			background-color: #00688B;
 			padding: 1em 2em;
@@ -3669,7 +3669,7 @@
 			border-radius: 3px;
 		}
 
-		.looking-for li:hover {
+		.header-text li:hover {
 			display: inline-block;
 			background-color: rgba(0, 104, 139, 0.9);
 			padding: 1em 2em;

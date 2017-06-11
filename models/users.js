@@ -1,5 +1,8 @@
 const pg = require('pg');
 
+const scrypt = require('scrypt');
+var scryptParameters = scrypt.paramsSync(0.1);
+
 // Connect to the postgres database
 const connString = process.env.DATABASE_URL || 'postgres://localhost/realworld';
 const client = new pg.Client(connString);
@@ -15,8 +18,8 @@ function insertUser(first_name, last_name, age, city, move_in_date, company,
   num_bedrooms, num_baths, neighborhood1, neighborhood2, neighborhood3,
   min_rent, max_rent, num_roommates, adjective1, adjective2, adjective3,
   myers_briggs, r_adjective1, r_adjective2, r_adjective3, email, phone,
-  password) {
-  client.query('INSERT INTO LANDING(first_name, last_name, age, city, '
+  hash) {
+  client.query('INSERT INTO USERS(first_name, last_name, age, city, '
     + 'move_in_date, company, num_bedrooms, num_baths, neighborhood1, '
     + 'neighborhood2, neighborhood3, min_rent, max_rent, num_roommates, '
     + 'adjective1, adjective2, adjective3, myers_briggs, r_adjective1, '
@@ -26,7 +29,7 @@ function insertUser(first_name, last_name, age, city, move_in_date, company,
       move_in_date, company, num_bedrooms, num_baths, neighborhood1,
       neighborhood2, neighborhood3, min_rent, max_rent, num_roommates,
       adjective1, adjective2, adjective3, myers_briggs, r_adjective1,
-      r_adjective2, r_adjective3, email, phone, password]);
+      r_adjective2, r_adjective3, email, phone, hash]);
 }
 
 module.exports = {
