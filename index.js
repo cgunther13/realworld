@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 
 // Landing Page
 app.get('/', (req, res) => {
-  res.render('landing');
+  res.render('index');
 });
 
 app.get('/sign-up', (req, res) => {

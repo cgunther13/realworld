@@ -47,11 +47,9 @@ function insertUser(req, res) {
   // Insert the user into the LANDING database
   usersModels.insertUser(req.body.first_name, req.body.last_name, req.body.age,
     req.body.city, req.body.move_in_date, req.body.company,
-    req.body.num_bedrooms, req.body.num_baths, req.body.neighborhood1,
-    req.body.neighborhood2, req.body.neighborhood3, req.body.min_rent,
-    req.body.max_rent, req.body.num_roommates, req.body.adjective1,
-    req.body.adjective2, req.body.adjective3, req.body.myers_briggs,
-    req.body.r_adjective1, req.body.r_adjective2, req.body.r_adjective3,
+    req.body.num_bedrooms, req.body.num_baths, req.body.neighborhoods,
+    req.body.min_rent, req.body.max_rent, req.body.num_roommates,
+    req.body.adjectives, req.body.myers_briggs, req.body.r_adjectives,
     req.body.email, req.body.phone, hash);
 
   res.redirect('/thanks');

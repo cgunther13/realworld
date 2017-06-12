@@ -15,21 +15,17 @@ function hashPassword(plaintextPassword, callback){
 }
 
 function insertUser(first_name, last_name, age, city, move_in_date, company,
-  num_bedrooms, num_baths, neighborhood1, neighborhood2, neighborhood3,
-  min_rent, max_rent, num_roommates, adjective1, adjective2, adjective3,
-  myers_briggs, r_adjective1, r_adjective2, r_adjective3, email, phone,
-  hash) {
+  num_bedrooms, num_baths, neighborhoods, min_rent, max_rent, num_roommates,
+  adjectives, myers_briggs, r_adjectives, email, phone, hash) {
+    console.log("Models")
   client.query('INSERT INTO USERS(first_name, last_name, age, city, '
-    + 'move_in_date, company, num_bedrooms, num_baths, neighborhood1, '
-    + 'neighborhood2, neighborhood3, min_rent, max_rent, num_roommates, '
-    + 'adjective1, adjective2, adjective3, myers_briggs, r_adjective1, '
-    + 'r_adjective2, r_adjective3, email, phone, password) VALUES($1, $2, $3, '
-    + '$4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, '
-    + '$19,$20, $21, $22, $23, $24)', [first_name, last_name, age, city,
-      move_in_date, company, num_bedrooms, num_baths, neighborhood1,
-      neighborhood2, neighborhood3, min_rent, max_rent, num_roommates,
-      adjective1, adjective2, adjective3, myers_briggs, r_adjective1,
-      r_adjective2, r_adjective3, email, phone, hash]);
+    + 'move_in_date, company, num_bedrooms, num_baths, neighborhoods, '
+    + 'min_rent, max_rent, num_roommates, adjectives, myers_briggs, '
+    + 'r_adjectives, email, phone, password) VALUES($1, $2, $3, $4, $5, $6, $7, '
+    + '$8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)', [first_name,
+      last_name, age, city, move_in_date, company, num_bedrooms, num_baths,
+      neighborhoods, min_rent, max_rent, num_roommates, adjectives,
+      myers_briggs, r_adjectives, email, phone, hash]);
 }
 
 module.exports = {
