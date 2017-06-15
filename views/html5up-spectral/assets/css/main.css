@@ -3661,6 +3661,7 @@
 
 	.header-text {
 		color: white;
+		height: 0.5em;
 	}
 
 		.header-text h2, p {
@@ -3754,6 +3755,14 @@
 	.madlib #phone {
 		width: 300px;
 		color: #00688B;
+	}
+
+	.apartments-form, .roommates-form, .demographics-form, .else-form {
+		display: none;
+	}
+
+	.active-form {
+		display: block;
 	}
 
 /* Main */

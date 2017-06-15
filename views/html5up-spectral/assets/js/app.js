@@ -1,13 +1,11 @@
 var main = function() {
-  $('.apartments').click(function() {
-    $('.apartments-madlib').fadeIn(300);
+  $('.next-form').click(function() {
+    var currentForm = $('.active-form');
+    var nextForm = currentForm.next();
+
+    currentForm.fadeOut(600).removeClass('active-form');
+    nextForm.fadeIn(600).addClass('active-form');
   });
-  $('.roommates').click(function() {
-    $('.apartments-madlib').fadeIn(300);
-  });
-  $('.both').click(function() {
-    $('.both-madlib').addClass('active');
-  });
-}
+};
 
 $(document).ready(main);
