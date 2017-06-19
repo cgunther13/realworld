@@ -17,7 +17,6 @@ function hashPassword(plaintextPassword, callback){
 function insertUser(first_name, last_name, age, city, move_in_date, company,
   num_bedrooms, num_baths, neighborhoods, min_rent, max_rent, num_roommates,
   adjectives, myers_briggs, r_adjectives, email, phone, hash) {
-    console.log("Models")
   client.query('INSERT INTO USERS(first_name, last_name, age, city, '
     + 'move_in_date, company, num_bedrooms, num_baths, neighborhoods, '
     + 'min_rent, max_rent, num_roommates, adjectives, myers_briggs, '
