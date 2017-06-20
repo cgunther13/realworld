@@ -44,6 +44,31 @@ function insertUser(req, res) {
     req.body.move_in_date = null;
   }
 
+  // Submit GA Hit
+  var form = document.getElementById('madlib');
+
+  // Adds a listener for the "submit" event.
+  form.addEventListener('submit', function(event) {
+    // Prevents the browser from submitting the form and thus unloading the
+    // current page.
+    event.preventDefault();
+    // Creates a timeout to call `submitForm` after one second.
+    setTimeout(submitForm, 1000);
+    // Keeps track of whether or not the form has been submitted.
+    // Prevents form from being submitted 2x if `hitCallback` fires normally.
+    var formSubmitted = false;
+    function submitForm() {
+      if (!formSubmitted) {
+        formSubmitted = true;
+        form.submit();
+      }
+    }
+    // Sends the event to Google Analytics and then resubmits the form.
+    ga('send', 'event', 'madlib', 'submit', {
+      hitCallback: submitForm
+    });
+  });
+
   // Insert the user into the LANDING database
   usersModels.insertUser(req.body.first_name, req.body.last_name, req.body.age,
     req.body.city, req.body.move_in_date, req.body.company,
