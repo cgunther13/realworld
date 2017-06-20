@@ -44,9 +44,16 @@ function insertUser(req, res) {
     req.body.move_in_date = null;
   }
 
+  // Insert the user into the LANDING database
+  usersModels.insertUser(req.body.first_name, req.body.last_name, req.body.age,
+    req.body.city, req.body.move_in_date, req.body.company,
+    req.body.num_bedrooms, req.body.num_baths, req.body.neighborhoods,
+    req.body.min_rent, req.body.max_rent, req.body.num_roommates,
+    req.body.adjectives, req.body.myers_briggs, req.body.r_adjectives,
+    req.body.email, req.body.phone, hash);
+
   // Submit GA Hit
   var form = document.getElementById('madlib');
-
   // Adds a listener for the "submit" event.
   form.addEventListener('submit', function(event) {
     // Prevents the browser from submitting the form and thus unloading the
@@ -65,17 +72,11 @@ function insertUser(req, res) {
     }
     // Sends the event to Google Analytics and then resubmits the form.
     ga('send', 'event', 'madlib', 'submit', {
+      console.log("Hello");
+      console.log(form);
       hitCallback: submitForm
     });
   });
-
-  // Insert the user into the LANDING database
-  usersModels.insertUser(req.body.first_name, req.body.last_name, req.body.age,
-    req.body.city, req.body.move_in_date, req.body.company,
-    req.body.num_bedrooms, req.body.num_baths, req.body.neighborhoods,
-    req.body.min_rent, req.body.max_rent, req.body.num_roommates,
-    req.body.adjectives, req.body.myers_briggs, req.body.r_adjectives,
-    req.body.email, req.body.phone, hash);
 
   res.redirect('/thanks');
 }
